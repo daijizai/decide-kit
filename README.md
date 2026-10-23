@@ -11,7 +11,7 @@
 支持 Skills CLI 的环境可使用：
 
 ```bash
-npx skills add daijizai/snapshot --skill decide-kit
+npx skills add daijizai/decide-kit --skill decide-kit
 ```
 
 也可下载本仓库，将包含 SKILL.md 的 `skills/decide-kit/` 文件夹复制到你的 Agent 的技能目录。例如 Codex 使用 `~/.codex/skills/decide-kit/`。安装后新开会话，明确请求“使用 decide-kit”。
