@@ -1,6 +1,6 @@
 # 手工验收案例
 
-在支持 Skill 的 Agent 中加载 skills/snapshot/SKILL.md，对下列场景分别运行。
+在支持 Skill 的 Agent 中加载 skills/decide-kit/SKILL.md，对下列场景分别运行。
 这是可重复使用的验收清单，不代表已经完成跨模型评测。
 
 | 场景 | 输入要点 | 应观察的行为 |

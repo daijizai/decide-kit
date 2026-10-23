@@ -1,4 +1,4 @@
-# Snapshot
+# DecideKit
 
 **让你正在使用的大模型，进入结构化决策模式。**
 
@@ -11,14 +11,14 @@
 支持 Skills CLI 的环境可使用：
 
 ```bash
-npx skills add daijizai/snapshot --skill snapshot
+npx skills add daijizai/snapshot --skill decide-kit
 ```
 
-也可下载本仓库，将包含 SKILL.md 的 `skills/snapshot/` 文件夹复制到你的 Agent 的技能目录。例如 Codex 使用 `~/.codex/skills/snapshot/`。安装后新开会话，明确请求“使用 snapshot”。
+也可下载本仓库，将包含 SKILL.md 的 `skills/decide-kit/` 文件夹复制到你的 Agent 的技能目录。例如 Codex 使用 `~/.codex/skills/decide-kit/`。安装后新开会话，明确请求“使用 decide-kit”。
 
 ## 使用
 
-发送“使用 snapshot 判断以下输入”，附上：
+发送“使用 decide-kit 判断以下输入”，附上：
 
 ```json
 {
@@ -41,7 +41,7 @@ npx skills add daijizai/snapshot --skill snapshot
 
 ```json
 {
-  "protocol": "snapshot/1",
+  "protocol": "decide-kit/1",
   "answers": {
     "intent": {
       "type": "choice",
@@ -69,7 +69,7 @@ npx skills add daijizai/snapshot --skill snapshot
 
 ## 和 Jev 的关系
 
-Snapshot 是独立的提示词协议，与 TypeSafe AI 无关联，**不兼容 Jev API，也没有复现 Jev 模型**。
+DecideKit 是独立的提示词协议，与 TypeSafe AI 无关联，**不兼容 Jev API，也没有复现 Jev 模型**。
 
 - 使用当前宿主模型，不改变模型架构、速度或成本。
 - 不输出未经校准的概率或置信度。
@@ -77,7 +77,7 @@ Snapshot 是独立的提示词协议，与 TypeSafe AI 无关联，**不兼容 J
 - 纯 Skill 无法强制 JSON 格式，也不能保证跨模型一致或每次判断正确。
 - 仅根据提供的 state 判断；需要最新事实时，请先获取资料再提供给它。
 
-完整规则：[SKILL.md](skills/snapshot/SKILL.md)。手工验收案例：[examples/acceptance.md](examples/acceptance.md)。
+完整规则：[SKILL.md](skills/decide-kit/SKILL.md)。手工验收案例：[examples/acceptance.md](examples/acceptance.md)。
 
 ## 贡献
 

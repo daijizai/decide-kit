@@ -1,9 +1,9 @@
 ---
-name: snapshot
+name: decide-kit
 description: Make bounded, structured decisions from supplied state using Choice, Score, or Noul questions. Use for explicit decision-mode requests, classification, rubric scoring, or yes/no evaluation with JSON results; not for open-ended planning or executing the selected action.
 ---
 
-# Snapshot
+# DecideKit
 
 Turn supplied information into typed decisions using the current language model. Inspired by Jev's state-and-questions pattern; this is a prompt-only protocol, not Jev or its API.
 
@@ -33,7 +33,7 @@ Answer-specific field: `score` (integer index or null).
 ### Noul
 Evaluate the proposition in `instructions`. Optional `criteria` is a nonempty string clarifying what counts as true or false. Return true only when supported and false when contradicted or when an explicitly stated closed-world rule warrants it. Absence of evidence alone is not false.
 
-Answer-specific field: `noul` (boolean or null). Unlike Jev's probability-valued Noul, Snapshot uses a boolean with an explicit abstention state.
+Answer-specific field: `noul` (boolean or null). Unlike Jev's probability-valued Noul, DecideKit uses a boolean with an explicit abstention state.
 
 ## Evaluation and output
 
@@ -43,7 +43,7 @@ Return one valid JSON object, without Markdown fences or surrounding commentary:
 
 ```json
 {
-  "protocol": "snapshot/1",
+  "protocol": "decide-kit/1",
   "answers": {
     "question_id": {
       "type": "choice",
@@ -95,7 +95,7 @@ Input:
 Output:
 ```json
 {
-  "protocol": "snapshot/1",
+  "protocol": "decide-kit/1",
   "answers": {
     "intent": {
       "type": "choice",
